@@ -5,11 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 export default function Topbar() {
-  const { user } = useContext(AuthContext);
+  const { user, dispatch } = useContext(AuthContext);
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   let history = useHistory()
   const handleclick = ()=>{
-    // dispatch({ type: "LOGOUT" });
+    dispatch({ type: "LOGOUT" });
     history.push("/register")
   }
   return (

@@ -8,7 +8,7 @@ import {
 } from "@material-ui/icons";
 import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { axiosInstance } from "../../config";
+import axios from "axios";
 
 export default function Share() {
   const { user } = useContext(AuthContext);
@@ -30,11 +30,11 @@ export default function Share() {
       newPost.img = fileName;
       console.log(newPost);
       try {
-        await axiosInstance.post("/upload", data);
+        await axios.post("/upload", data);
       } catch (err) {}
     }
     try {
-      await axiosInstance.post("/posts", newPost);
+      await axios.post("/posts", newPost);
       window.location.reload();
     } catch (err) {}
   };

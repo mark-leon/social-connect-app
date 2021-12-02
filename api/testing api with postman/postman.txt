@@ -1,0 +1,12 @@
+
+{
+   
+    "username": "bb",
+    "email": "bb@gmail.com",
+    "password":"test!23"
+}
+{
+   
+    "email": "bb@gmail.com",
+    "password":"test!23"
+}

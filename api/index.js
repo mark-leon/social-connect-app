@@ -48,11 +48,12 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
-app.use(express.static(path.join(__dirname, "/clientside/build")));
+// app.use(express.static(path.join(__dirname, "/clientside/build")));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/clientside/build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '/clientside/build', 'index.html'));
+// });
+// "heroku-postbuild": "cd clientside && npm install && npm run build"
 
 
 app.listen(process.env.PORT || 8800, () => {

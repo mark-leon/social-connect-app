@@ -1,5 +1,7 @@
 ﻿
 Social Connect Application
+
+
 The application has list of features:
 User can register and login User can create post
 User can react to post
